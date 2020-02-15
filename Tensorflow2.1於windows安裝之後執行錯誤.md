@@ -1,13 +1,13 @@
 # 於windows安裝完tensorflow 2.1 出現如下錯誤  
 
 原因是因為需要安裝Visual C++語言套件
-[下載網址](https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads)
+[下載網址](https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads)  
 
-[x86: vc_redist.x86.exe](https://aka.ms/vs/16/release/vc_redist.x86.exe)
-[x64: vc_redist.x64.exe](https://aka.ms/vs/16/release/vc_redist.x64.exe)
-[ARM64: vc_redist.arm64.exe](https://aka.ms/vs/16/release/vc_redist.x64.exe)
+[x86: vc_redist.x86.exe](https://aka.ms/vs/16/release/vc_redist.x86.exe)  
+[x64: vc_redist.x64.exe](https://aka.ms/vs/16/release/vc_redist.x64.exe)  
+[ARM64: vc_redist.arm64.exe](https://aka.ms/vs/16/release/vc_redist.x64.exe)  
 
-安裝完成之後可以解決這個問題
+安裝完成之後可以解決這個問題  
 
 ```
 Traceback (most recent call last):
