@@ -23,3 +23,50 @@ git lfs pull
 '''
 即可解決
 
+
+
+
+# 安裝RVIZ2 遇到問題
+'''
+--- stderr: rviz_ogre_vendor                                                                                
+CMake Error at CMake/Utils/MacroLogFeature.cmake:100 (MESSAGE):
+  
+
+  
+  -----------------------------------------------------------------------------
+
+
+  -- The following REQUIRED packages could NOT be located on your system.
+
+  -- Please install them before continuing this software installation.
+
+  -- If you are in Windows, try passing -DOGRE_DEPENDENCIES_DIR=<path to
+  dependencies>
+
+  
+  -----------------------------------------------------------------------------
+
+
+  + Xaw: X11 Athena widget set <http://www.x.org>
+
+  
+  -----------------------------------------------------------------------------
+Call Stack (most recent call first):
+  CMake/FeatureSummary.cmake:234 (MACRO_DISPLAY_FEATURE_LOG)
+  CMakeLists.txt:516 (include)
+
+
+make[2]: *** [ogre-v1.12.1-prefix/src/ogre-v1.12.1-stamp/ogre-v1.12.1-configure] Error 1
+make[1]: *** [CMakeFiles/ogre-v1.12.1.dir/all] Error 2
+make: *** [all] Error 2
+---
+Failed   <<< rviz_ogre_vendor [5.45s, exited with code 2]
+Aborted  <<< isaac_ros_common [5.63s]                                                                                            
+Aborted  <<< isaac_ros_nvengine_interfaces [7.64s]  
+'''
+
+# 解決方法
+sudo apt install libxaw7-dev libxrandr-dev libfreetype6-dev qt5-default
+
+
+
