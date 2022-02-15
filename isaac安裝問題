@@ -1,0 +1,25 @@
+'''
+--- stderr: isaac_ros_nvengine                                                                                                     
+/usr/bin/ld:/workspaces/isaac_ros-dev/src/isaac_ros_common/isaac_ros_nvengine/gxf/lib/gxf_jetpack46/core/libgxf_core.so: file format not recognized; treating as linker script
+/usr/bin/ld:/workspaces/isaac_ros-dev/src/isaac_ros_common/isaac_ros_nvengine/gxf/lib/gxf_jetpack46/core/libgxf_core.so:1: syntax error
+collect2: error: ld returned 1 exit status
+make[2]: *** [libgxe_node.so] Error 1
+make[1]: *** [CMakeFiles/gxe_node.dir/all] Error 2
+make: *** [all] Error 2
+---
+Failed   <<< isaac_ros_nvengine [22.6s, exited with code 2]
+Aborted  <<< isaac_ros_image_proc [1min 35s]                                                        
+Aborted  <<< isaac_ros_stereo_image_proc [2min 19s]      
+'''
+
+＃原因
+https://github.com/NVIDIA-ISAAC-ROS/isaac_ros_common
+因為有一些大檔案沒有下載成功所以導致錯誤
+
+# 解決
+進到isaac_ros_common 資料夾內 打指令
+'''
+git lfs pull
+'''
+即可解決
+
